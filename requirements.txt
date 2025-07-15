@@ -1,12 +1,19 @@
+# Telegram scraping & logging
 telethon
 python-dotenv
 loguru
 
-
+# DBT for data transformation
 dbt-core==1.7.11
 dbt-postgres==1.7.11
 
-
+# Object Detection (YOLOv8)
 ultralytics==8.1.28
 opencv-python==4.9.0.80
 numpy==1.26.4
+
+# FastAPI + DB access
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
