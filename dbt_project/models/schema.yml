@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw
+    tables:
+      - name: raw_image_detections
+
+models:
+  - name: stg_image_detections
+    description: "Staging for YOLO image detection"
+    columns:
+      - name: message_id
+        tests: [not_null]
+      - name: detected_object_class
+        tests: [not_null]
+
+  - name: fct_image_detections
+    description: "Fact table with YOLO object detections"
+    columns:
+      - name: message_id
+        tests: [not_null]
